@@ -1,0 +1,43 @@
+[cloudera@quickstart ~]$ hdfs dfs -ls /user/cloudera
+Found 4 items
+-rw-r--r--   1 cloudera cloudera     736519 2022-11-13 09:59 /user/cloudera/voyna1.txt
+-rw-r--r--   1 cloudera cloudera     770324 2022-11-13 09:59 /user/cloudera/voyna2.txt
+-rw-r--r--   1 cloudera cloudera     843205 2022-11-13 09:59 /user/cloudera/voyna3.txt
+-rw-r--r--   1 cloudera cloudera     697960 2022-11-13 09:59 /user/cloudera/voyna4.txt
+[cloudera@quickstart Desktop]$ hadoop fs -appendToFile voyna1.txt voyna2.txt voyna3.txt voyna4.txt /user/cloudera/hadoopfile
+[cloudera@quickstart Desktop]$ hdfs dfs -ls /user/cloudera
+Found 5 items
+-rw-r--r--   1 cloudera cloudera    3048008 2022-11-13 10:15 /user/cloudera/hadoopfile
+-rwxrwxrwx   1 cloudera cloudera     736519 2022-11-13 09:59 /user/cloudera/voyna1.txt
+-rwxrwxrwx   1 cloudera cloudera     770324 2022-11-13 09:59 /user/cloudera/voyna2.txt
+-rwxrwxrwx   1 cloudera cloudera     843205 2022-11-13 09:59 /user/cloudera/voyna3.txt
+-rwxrwxrwx   1 cloudera cloudera     697960 2022-11-13 09:59 /user/cloudera/voyna4.txt
+[cloudera@quickstart Desktop]$ hdfs dfs -ls /user/cloudera
+Found 5 items
+-rw-r--r--   1 cloudera cloudera    3048008 2022-11-13 10:15 /user/cloudera/hadoopfile
+-rw-r--r--   1 cloudera cloudera     736519 2022-11-13 09:59 /user/cloudera/voyna1.txt
+-rw-r--r--   1 cloudera cloudera     770324 2022-11-13 09:59 /user/cloudera/voyna2.txt
+-rw-r--r--   1 cloudera cloudera     843205 2022-11-13 09:59 /user/cloudera/voyna3.txt
+-rw-r--r--   1 cloudera cloudera     697960 2022-11-13 09:59 /user/cloudera/voyna4.txt
+[cloudera@quickstart Desktop]$ hadoop fs -chmod -R 755 /user/cloudera/hadoopfile
+[cloudera@quickstart Desktop]$ hdfs dfs -ls /user/cloudera
+Found 5 items
+-rwxr-xr-x   1 cloudera cloudera    3048008 2022-11-13 10:15 /user/cloudera/hadoopfile
+-rw-r--r--   1 cloudera cloudera     736519 2022-11-13 09:59 /user/cloudera/voyna1.txt
+-rw-r--r--   1 cloudera cloudera     770324 2022-11-13 09:59 /user/cloudera/voyna2.txt
+-rw-r--r--   1 cloudera cloudera     843205 2022-11-13 09:59 /user/cloudera/voyna3.txt
+-rw-r--r--   1 cloudera cloudera     697960 2022-11-13 09:59 /user/cloudera/voyna4.txt
+[cloudera@quickstart Desktop]$ hadoop fs -du /user/cloudera/hadoopfile
+3048008  3048008  /user/cloudera/hadoopfile
+[cloudera@quickstart Desktop]$ hadoop fs -setrep -w 2 /user/cloudera/hadoopfile
+Replication 2 set: /user/cloudera/hadoopfile
+[cloudera@quickstart Desktop]$ hadoop fs -du /user/cloudera/hadoopfile
+3048008  6096016  /user/cloudera/hadoopfile
+[cloudera@quickstart Desktop]$ hdfs dfs -cat /user/cloudera/hadoopfile | wc -l
+10272
+
+
+
+
+
+
