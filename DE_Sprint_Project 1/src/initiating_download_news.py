@@ -14,5 +14,5 @@ for url in rss_feeds:
     for post in feed.entries:
         posts.append((post.title, post.link, post.published, post.category))
 df_initiating_download_news = pd.DataFrame(posts, columns=["title", "link", "published", "category"])
-df_initiating_download_news.to_csv(r'C:\Sprint\raw_news_data.csv', sep='\t', encoding='utf-8', header='False')
-
+df_initiating_download_news.to_csv(r'C:\Sprint\raw_news_data.csv', encoding='utf-8', index=False)
+print(df_initiating_download_news)
