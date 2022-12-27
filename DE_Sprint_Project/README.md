@@ -35,6 +35,8 @@
 
 
 ### Обновление новостей производиться раз в сутки, с помощью bat файла:
+
+- [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/bat/cron.bat](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/bat/cron.bat "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/bat/cron.bat")
 	- В Планировщике заданий наводим мышкой на Библиотеку планировщика и кликаем правой кнопкой мыши, чтобы появилось меню. Там выбираем пункт: Создать простую задачу…
 	- В появившемся окне зададим имя скрипту. После чего кликаем на кнопку Далее.
 	- В следующем окне выберем как часто хотим запускать наш скрипт, в нашем случае выберем ежедневно. И вновь жамкаем на кнопку Далее.
@@ -45,10 +47,10 @@
 ### Иницилизация новостей и загрузка первичных данных происходит с помощью py скрипта.
 - [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py")
 #### Слой сырых данных представлен в csv файле
-- [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_updater.py](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_updater.py "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_updater.py")
+- [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv")
 ### Обновление новостей и загрузка первичных данных происходит с помощью py скрипта.
 - [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py")
 #### Слой Инкрементальных данных представлен в csv файле
 - [[https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_intermediate_layer.csv)]([https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_intermediate_layer.csv) "[https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_intermediate_layer.csv)")
-### Cкрипт, формирующий витрину данных
-- [[https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/data_mart.py)]([https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/data_mart.py) "[https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/data_mart.py)")
+#### Cкрипт, формирующий витрину данных
+- [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/data_mart.py](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/data_mart.py "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/data_mart.py")
