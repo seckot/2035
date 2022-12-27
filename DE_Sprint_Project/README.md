@@ -44,6 +44,7 @@
 
 ### Иницилизация новостей и загрузка первичных данных происходит с помощью py скрипта.
 #### Слой сырых данных представлен в csv файле
+- [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv")
 ### Обновление новостей и загрузка первичных данных происходит с помощью py скрипта.
 #### Слой Инкрементальных данных представлен в csv файле
 ### Cкрипт, формирующий витрину данных
