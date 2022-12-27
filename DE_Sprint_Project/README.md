@@ -52,5 +52,5 @@
 - [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/news_updater.py](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/news_updater.py "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/news_updater.py")
 #### Слой Инкрементальных данных представлен в csv файле
 - [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_intermediate_layer.csv](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_intermediate_layer.csv "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/news_intermediate_layer.csv")
-#### Cкрипт, формирующий витрину данных
+### Формирование витрины данных с помощью py скрипта
 - [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/data_mart.py](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/data_mart.py "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/data_mart.py")
