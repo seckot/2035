@@ -19,7 +19,7 @@ df_upload_raw_news = pd.read_csv(r'C:\Sprint\raw_news_data.csv', on_bad_lines='s
 
 df_worker = pd.concat([df_upload_raw_news,df_download_update_news], sort=False, axis=0)
 df_intermediate_layer_news = df_worker.drop_duplicates()
-#df_intermediate_layer_news.reset_index(drop=True, inplace=True)
+df_intermediate_layer_news['published'] = pd.to_datetime(df_intermediate_layer_news['published']).dt.date
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Международная панорама'], 'Мир')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Экономика и бизнес'], 'Экономика')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Моя страна '], 'Россия')
