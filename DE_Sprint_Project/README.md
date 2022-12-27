@@ -43,7 +43,7 @@
 	- В следующем окне укажем, расположение созданного нами файл с расширением .bat.
 
 ### Иницилизация новостей и загрузка первичных данных происходит с помощью py скрипта.
-- [[https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py)]([https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py) "[https://lenta.ru/rss/](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py)")
+- [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/initiating_download_news.py")
 #### Слой сырых данных представлен в csv файле
 - [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/out/raw_news_data.csv")
 ### Обновление новостей и загрузка первичных данных происходит с помощью py скрипта.
