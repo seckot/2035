@@ -21,7 +21,7 @@ df_intermediate_layer_news = pd.concat([df_upload_raw_news,df_download_update_ne
 df_intermediate_layer_news.to_csv(r'C:\Sprint\news_intermediate_layer.csv', encoding='utf-8', index=False)
 df_intermediate_layer_news_old = pd.read_csv(r'C:\Sprint\news_intermediate_layer.csv', on_bad_lines='skip')
 
-df_intermediate_layer_news = pd.concat([df_upload_raw_news,df_intermediate_layer_news_old,df_download_update_news], sort=False, axis=0)
+df_intermediate_layer_news = pd.concat([df_intermediate_layer_news_old,df_download_update_news], sort=False, axis=0)
 
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Международная панорама'], 'Мир')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Экономика и бизнес'], 'Экономика')
