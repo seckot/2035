@@ -20,13 +20,12 @@ df_intermediate_layer_news_old = pd.read_csv(r'C:\Sprint\news_intermediate_layer
 
 df_intermediate_layer_news = pd.concat([df_upload_raw_news,df_intermediate_layer_news_old,df_download_update_news], sort=False, axis=0)
 
-
-df_intermediate_layer_news['published'] = pd.to_datetime(df_intermediate_layer_news['published']).dt.normalize()
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Международная панорама'], 'Мир')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Экономика и бизнес'], 'Экономика')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Моя страна '], 'Россия')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Армия и ОПК '], 'Силовые структуры')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Наука и техника'], 'Технологии')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Авто'], 'Транспорт')
+df_intermediate_layer_news['published'] = pd.to_datetime(df_intermediate_layer_news['published']).dt.date
 df_intermediate_layer_news_to_file = df_intermediate_layer_news.drop_duplicates()
 df_intermediate_layer_news_to_file.to_csv(r'C:\Sprint\news_intermediate_layer.csv', encoding='utf-8', index=False)
