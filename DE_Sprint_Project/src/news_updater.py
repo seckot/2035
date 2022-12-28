@@ -16,6 +16,9 @@ for url in rss_feeds:
 df_download_update_news = pd.DataFrame(posts, columns=["title", "link", "published", "category"])
 
 df_upload_raw_news = pd.read_csv(r'C:\Sprint\raw_news_data.csv', on_bad_lines='skip')
+df_intermediate_layer_news = pd.concat([df_upload_raw_news,df_download_update_news], sort=False, axis=0)
+
+df_intermediate_layer_news.to_csv(r'C:\Sprint\news_intermediate_layer.csv', encoding='utf-8', index=False)
 df_intermediate_layer_news_old = pd.read_csv(r'C:\Sprint\news_intermediate_layer.csv', on_bad_lines='skip')
 
 df_intermediate_layer_news = pd.concat([df_upload_raw_news,df_intermediate_layer_news_old,df_download_update_news], sort=False, axis=0)
@@ -27,5 +30,5 @@ df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Наука и техника'], 'Технологии')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Авто'], 'Транспорт')
 df_intermediate_layer_news['published'] = pd.to_datetime(df_intermediate_layer_news['published']).dt.date
-df_intermediate_layer_news_to_file = df_intermediate_layer_news.drop_duplicates()
-df_intermediate_layer_news_to_file.to_csv(r'C:\Sprint\news_intermediate_layer.csv', encoding='utf-8', index=False)
+df_intermediate_layer_news = df_intermediate_layer_news.drop_duplicates()
+df_intermediate_layer_news.to_csv(r'C:\Sprint\news_intermediate_layer.csv', encoding='utf-8', index=False)
