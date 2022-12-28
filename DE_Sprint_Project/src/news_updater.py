@@ -31,4 +31,5 @@ df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Авто'], 'Транспорт')
 df_intermediate_layer_news['published'] = pd.to_datetime(df_intermediate_layer_news['published']).dt.date
 df_intermediate_layer_news = df_intermediate_layer_news.drop_duplicates()
-df_intermediate_layer_news.to_csv(r'C:\Sprint\news_intermediate_layer.csv', encoding='utf-8', index=False)
+df_intermediate_layer_news_date = df_intermediate_layer_news.sort_values(by='published')
+df_intermediate_layer_news_date.to_csv(r'C:\Sprint\news_intermediate_layer.csv', encoding='utf-8', index=False)
