@@ -34,7 +34,7 @@
 - [https://tass.ru/rss/v2.xml](https://tass.ru/rss/v2.xml "https://tass.ru/rss/v2.xml")
 
 
-### Обновление новостей производиться раз в сутки, с помощью bat файла:
+### Обновление новостей производиться раз в сутки, с помощью bat файла и планировщика задач в ОС Windows:
 
 - [https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/bat/cron.bat](https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/bat/cron.bat "https://github.com/seckot/DE_Sprint/blob/main/DE_Sprint_Project/src/bat/cron.bat")
 	- В Планировщике заданий наводим мышкой на Библиотеку планировщика и кликаем правой кнопкой мыши, чтобы появилось меню. Там выбираем пункт: Создать простую задачу…
