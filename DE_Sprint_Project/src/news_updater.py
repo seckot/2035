@@ -29,6 +29,7 @@ df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Армия и ОПК '], 'Силовые структуры')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Наука и техника'], 'Технологии')
 df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Авто'], 'Транспорт')
+df_intermediate_layer_news["category"] = df_intermediate_layer_news["category"].replace(['Моя страна'], 'Россия')
 df_intermediate_layer_news['published'] = pd.to_datetime(df_intermediate_layer_news['published']).dt.date
 df_intermediate_layer_news = df_intermediate_layer_news.drop_duplicates()
 df_intermediate_layer_news_date = df_intermediate_layer_news.sort_values(by='published')
